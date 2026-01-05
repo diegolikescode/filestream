@@ -1,11 +1,16 @@
+import { useRef } from 'react'
 import './App.css'
 
 function App() {
-    return (
-        <>
-            <h1 className={``}>NEOBRUTALIST TORRENT CLIENT</h1>
-        </>
-    )
+  const inputRef = useRef(null)
+
+  return (
+    <>
+      <h1 className={``}>NEOBRUTALIST TORRENT CLIENT</h1>
+      <input ref={inputRef} placeholder={'insert torrent thing'} />
+      <button></button>
+    </>
+  )
 }
 
 export default App
