@@ -1,0 +1,26 @@
+{
+  "name": "neobrutalist-torrent",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npx tsc",
+    "exec": "npx tsc && node ./dist/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/diegolikescode/neobrutalist-torrent.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/diegolikescode/neobrutalist-torrent/issues"
+  },
+  "homepage": "https://github.com/diegolikescode/neobrutalist-torrent#readme",
+  "description": "",
+  "devDependencies": {
+    "@types/node": "^25.0.3",
+    "typescript": "^5.9.3"
+  }
+}
