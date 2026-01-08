@@ -1,11 +1,12 @@
 {
-  "name": "neobrutalist-torrent",
+  "name": "filestreaming",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "npx tsc",
-    "exec": "npx tsc && node ./dist/index.js"
+    "exec": "npx tsc && node ./dist/index.js",
+    "filedrop": "npx tsc src/examples/filedrop.ts --outDir dist_example && node ./dist_example/filedrop.js"
   },
   "repository": {
     "type": "git",
