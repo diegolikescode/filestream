@@ -1,20 +1,18 @@
-import express, { Express } from 'express'
+import express, { Express, Request, Response, NextFunction } from 'express'
 import { uploadHandler } from './handlers'
-import multer from 'multer'
+import busboy from 'busboy'
+import Stream from 'stream'
 
-const storage = {
-    _handleFile(req, file, cb) {
-        cb(null, {})
-    },
-}
+type RequestChunk = {
+    fileStream?: Stream.Readable
+} & Request
 
 export function prepareServer(): Express {
     const app = express()
-    const upload = multer({ dest: 'upload' })
 
     app.use(express.json())
 
-    app.post('/upload', upload.single('file-upload'), uploadHandler)
+    app.post('/upload', uploadHandler)
 
     return app
 }
